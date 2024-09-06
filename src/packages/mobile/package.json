@@ -1,0 +1,86 @@
+{
+  "name": "mobile",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "@react-navigation/native": "file:../blocks/core/node_modules/@react-navigation/native",
+    "@react-navigation/native-stack": "file:../blocks/core/node_modules/@react-navigation/native-stack",
+    "@react-navigation/stack": "file:../blocks/core/node_modules/@react-navigation/stack",
+    "babel-preset-react-native": "file:../blocks/core/node_modules/babel-preset-react-native",
+    "expo": "file:../blocks/core/node_modules/expo",
+    "expo-splash-screen": "file:../blocks/core/node_modules/expo-splash-screen",
+    "jest-enzyme": "file:../blocks/core/node_modules/jest-enzyme",
+    "react": "file:../blocks/core/node_modules/react",
+    "react-dom": "file:../blocks/core/node_modules/react-dom",
+    "react-native": "file:../blocks/core/node_modules/react-native",
+    "react-native-gesture-handler": "file:../blocks/core/node_modules/react-native-gesture-handler",
+    "react-native-safe-area-context": "file:../blocks/core/node_modules/react-native-safe-area-context",
+    "react-native-screens": "file:../blocks/core/node_modules/react-native-screens",
+    "react-native-web": "file:../blocks/core/node_modules/react-native-web"
+  },
+  "devDependencies": {
+    "@babel/core": "file:../blocks/core/node_modules/@babel/core",
+    "@types/babel__core": "file:../blocks/core/node_modules/@types/babel__core",
+    "@types/enzyme": "file:../blocks/core/node_modules/@types/enzyme",
+    "@types/react": "file:../blocks/core/node_modules/@types/react",
+    "@types/react-dom": "file:../blocks/core/node_modules/@types/react-dom",
+    "@types/react-native": "file:../blocks/core/node_modules/@types/react-native",
+    "@wojtekmaj/enzyme-adapter-react-17": "file:../blocks/core/node_modules/@wojtekmaj/enzyme-adapter-react-17",
+    "babel-jest": "file:../blocks/core/node_modules/babel-jest",
+    "enzyme": "file:../blocks/core/node_modules/enzyme",
+    "jest": "file:../blocks/core/node_modules/jest",
+    "jest-cucumber": "file:../blocks/core/node_modules/jest-cucumber",
+    "ts-jest": "file:../blocks/core/node_modules/ts-jest",
+    "typescript": "file:../blocks/core/node_modules/typescript"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/node_modules/jest-enzyme/lib/index.js"
+    ],
+    "setupFiles": [
+      "<rootDir>/test-setup.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest",
+      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/coverage/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/pages/index.ts"
+    ],
+    "cacheDirectory": ".jest/cache",
+    "testMatch": [
+      "<rootDir>/src/pages/**/__tests__/**/*.steps.{ts,tsx,js,jsx}"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ],
+    "collectCoverageFrom": [
+      "!node_modules/**/*",
+      "!build/**",
+      "!node_modules/**/**/*",
+      "!coverage/**/*",
+      "!__tests__/**/*",
+      "src/pages/*/*.{ts,tsx,js,jsx}",
+      "!src/pages/index.ts"
+    ]
+  },
+  "private": true
+}

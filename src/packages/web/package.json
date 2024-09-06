@@ -1,0 +1,94 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "file:../blocks/core/node_modules/react",
+    "react-dom": "file:../blocks/core/node_modules/react-dom",
+    "react-scripts": "file:../blocks/core/node_modules/react-scripts",
+    "react-router-dom": "file:../blocks/core/node_modules/react-router-dom",
+    "typescript": "file:../blocks/core/node_modules/typescript",
+    "@material-ui/icons": "file:../blocks/core/node_modules/@material-ui/icons",
+    "@material-ui/lab": "file:../blocks/core/node_modules/@material-ui/lab",
+    "@material-ui/core": "file:../blocks/core/node_modules/@material-ui/core"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "file:../blocks/core/node_modules/@babel/preset-react",
+    "@testing-library/jest-dom": "file:../blocks/core/node_modules/@testing-library/jest-dom",
+    "@testing-library/react": "file:../blocks/core/node_modules/@testing-library/react",
+    "@testing-library/user-event": "file:../blocks/core/node_modules/@testing-library/user-event",
+    "@types/enzyme": "file:../blocks/core/node_modules/@types/enzyme",
+    "@types/jest": "file:../blocks/core/node_modules/@types/jest",
+    "@types/node": "file:../blocks/core/node_modules/@types/node",
+    "@types/react": "file:../blocks/core/node_modules/@types/react",
+    "@types/react-dom": "file:../blocks/core/node_modules/@types/react-dom",
+    "@types/react-router-dom": "file:../blocks/core/node_modules/@types/react-router-dom",
+    "@wojtekmaj/enzyme-adapter-react-17": "file:../blocks/core/node_modules/@wojtekmaj/enzyme-adapter-react-17",
+    "enzyme": "file:../blocks/core/node_modules/enzyme",
+    "jest": "file:../blocks/core/node_modules/jest",
+    "jest-cucumber": "file:../blocks/core/node_modules/jest-cucumber",
+    "jest-enzyme": "file:../blocks/core/node_modules/jest-enzyme",
+    "ts-jest": "file:../blocks/core/node_modules/ts-jest",
+    "babel-jest": "file:../blocks/core/node_modules/babel-jest"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest --coverage",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/node_modules/jest-enzyme/lib/index.js"
+    ],
+    "setupFiles": [
+      "<rootDir>/test-setup.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest",
+      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/coverage/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/[^/]*/__tests__/",
+      "<rootDir>/src/pages/index.ts"
+    ],
+    "cacheDirectory": ".jest/cache",
+    "testMatch": [
+      "<rootDir>/src/pages/**/__tests__/**/*.steps.{ts,tsx,js,jsx}"
+    ],
+    "collectCoverageFrom": [
+      "!node_modules/**/*",
+      "!build/**",
+      "!node_modules/**/**/*",
+      "!coverage/**/*",
+      "!__tests__/**/*",
+      "src/pages/**/*.{ts,tsx,js,jsx}",
+      "!src/pages/index.ts"
+    ]
+  }
+}
