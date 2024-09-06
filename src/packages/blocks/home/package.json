@@ -1,0 +1,77 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "file:../core/node_modules/@babel/core",
+    "@babel/preset-react": "file:../core/node_modules/@babel/preset-react",
+    "cheerio": "file:../core/node_modules/cheerio",
+    "@types/babel__core": "file:../core/node_modules/@types/babel__core",
+    "@types/enzyme": "file:../core/node_modules/@types/enzyme",
+    "@types/react": "file:../core/node_modules/@types/react",
+    "@types/react-dom": "file:../core/node_modules/@types/react-dom",
+    "@types/react-native": "file:../core/node_modules/@types/react-native",
+    "@types/react-router-dom": "file:../core/node_modules/@types/react-router-dom",
+    "@wojtekmaj/enzyme-adapter-react-17": "file:../core/node_modules/@wojtekmaj/enzyme-adapter-react-17",
+    "babel-jest": "file:../core/node_modules/babel-jest",
+    "enzyme": "file:../core/node_modules/enzyme",
+    "jest": "file:../core/node_modules/jest",
+    "jest-cucumber": "file:../core/node_modules/jest-cucumber",
+    "jest-enzyme": "file:../core/node_modules/jest-enzyme",
+    "ts-jest": "file:../core/node_modules/ts-jest",
+    "typescript": "file:../core/node_modules/typescript",
+    "@testing-library/jest-dom": "file:../core/node_modules/@testing-library/jest-dom",
+    "@testing-library/react": "file:../core/node_modules/@testing-library/react",
+    "@testing-library/user-event": "file:../core/node_modules/@testing-library/user-event",
+    "@types/jest": "file:../core/node_modules/@types/jest",
+    "@types/node": "file:../core/node_modules/@types/node"
+  },
+  "resolutions": {
+    "@types/react-native": "file:../core/node_modules/@types/react-native",
+    "@types/react": "file:../core/node_modules/@types/react",
+    "cheerio": "file:../core/node_modules/cheerio"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/node_modules/jest-enzyme/lib/index.js"
+    ],
+    "setupFiles": [
+      "<rootDir>/test-setup.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest",
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/coverage/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/[^/]*/__tests__/"
+    ],
+    "cacheDirectory": ".jest/cache",
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.steps.{ts,tsx,js,jsx}"
+    ],
+    "collectCoverageFrom": [
+      "!node_modules/**/*",
+      "!build/**",
+      "!node_modules/**/**/*",
+      "!coverage/**/*",
+      "!__tests__/**/*",
+      "src/**/*.{ts,tsx,js,jsx}"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    }
+  }
+}
