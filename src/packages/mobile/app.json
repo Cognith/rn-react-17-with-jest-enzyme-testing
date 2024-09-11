@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "cognith-pokeapi-app",
-    "slug": "cognith-pokeapi-app",
+    "name": "cognith-rn",
+    "slug": "cognith-rn",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
@@ -12,9 +12,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },

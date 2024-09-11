@@ -20,7 +20,7 @@
     },
     "types": ["node", "jest"],
     "typeRoots": ["@types", "../../node_modules/@types"],
-    "rootDir": "./"
+    "rootDir": "../../"
   },
   "include": ["src"]
 }

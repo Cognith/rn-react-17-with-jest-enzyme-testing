@@ -1,5 +1,5 @@
 import { ComponentType } from "react";
-import { ComponentView } from "../pages";
+import ComponentView from "../../../blocks/details/src/ComponentView.web";
 
 interface RouteType {
   component: ComponentType;

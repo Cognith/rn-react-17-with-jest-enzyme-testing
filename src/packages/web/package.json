@@ -32,9 +32,8 @@
     "babel-jest": "file:../blocks/core/node_modules/babel-jest"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "jest --coverage",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -53,42 +52,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
-  },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>/node_modules/jest-enzyme/lib/index.js"
-    ],
-    "setupFiles": [
-      "<rootDir>/test-setup.ts"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "\\.(ts|tsx)$": "ts-jest",
-      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest"
-    },
-    "testPathIgnorePatterns": [
-      "<rootDir>/coverage/",
-      "<rootDir>/node_modules/",
-      "<rootDir>/src/[^/]*/__tests__/",
-      "<rootDir>/src/pages/index.ts"
-    ],
-    "cacheDirectory": ".jest/cache",
-    "testMatch": [
-      "<rootDir>/src/pages/**/__tests__/**/*.steps.{ts,tsx,js,jsx}"
-    ],
-    "collectCoverageFrom": [
-      "!node_modules/**/*",
-      "!build/**",
-      "!node_modules/**/**/*",
-      "!coverage/**/*",
-      "!__tests__/**/*",
-      "src/pages/**/*.{ts,tsx,js,jsx}",
-      "!src/pages/index.ts"
     ]
   }
 }
