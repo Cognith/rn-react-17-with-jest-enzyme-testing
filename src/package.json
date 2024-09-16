@@ -2,7 +2,7 @@
   "name": "workspace-rn-react-17-with-jest-enzyme-testing",
   "version": "1.0.0",
   "description": "A Testing Environment",
-  "main": "index.js",
+  "main": "./packages/mobile/index.js",
   "author": "jgandrade",
   "license": "MIT",
   "private": true,
